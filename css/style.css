@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #0f1e38;
+  --navy2:  #1a2c4e;
+  --gold:   #9a7b2f;
+  --cream:  #f5f0e8;
+  --muted:  rgba(255,255,255,.55);
+  --border: rgba(255,255,255,.12);
+  --max:    1000px;
+  --serif:  'Playfair Display', Georgia, serif;
+  --sans:   'Source Sans 3', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #fff;
+  background: var(--navy);
+}
+
+a { color: rgba(255,255,255,.8); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: #fff; }
+img { max-width: 100%; display: block; }
+
+/* ── Header / Masthead ── */
+.masthead {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.masthead-logo {
+  width: 220px;
+  margin: 0 auto 1.5rem;
+  border-radius: 4px;
+}
+
+.masthead h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: #fff;
+  margin-bottom: .3rem;
+}
+
+.masthead-location {
+  font-size: .9rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── Islands painting ── */
+.islands-section {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.islands-section img {
+  max-width: 560px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.islands-credit {
+  display: block;
+  margin-top: .75rem;
+  font-size: .78rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ── Sections ── */
+.section {
+  padding: 4.5rem 2rem;
+}
+
+.section-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.section-alt {
+  background: var(--navy2);
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: .5rem;
+}
+
+.section-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  border: none;
+  margin: .75rem 0 2rem;
+}
+
+/* ── About ── */
+.about-text {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-text p {
+  color: rgba(255,255,255,.82);
+  margin-bottom: 1.1rem;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+.about-text .imprint-link {
+  display: inline-block;
+  margin-top: .5rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 1px;
+  transition: color .2s;
+}
+.about-text .imprint-link:hover { color: var(--gold); }
+
+/* ── Coming Soon ── */
+.coming-soon-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .3rem .85rem;
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+}
+
+.coming-soon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.coming-soon-book {
+  display: flex;
+  gap: 1.75rem;
+  align-items: flex-start;
+}
+
+.coming-soon-book img {
+  width: 130px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.55);
+}
+
+.coming-soon-book h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #fff;
+  margin-bottom: .35rem;
+}
+
+.book-meta {
+  color: var(--muted);
+  font-size: .88rem;
+  margin-bottom: .85rem;
+}
+
+.coming-soon-book p {
+  font-size: .95rem;
+  color: rgba(255,255,255,.78);
+  line-height: 1.65;
+}
+
+/* ── Reviews ── */
+.book-reviews {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.book-review-heading {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.38);
+  margin-bottom: .1rem;
+}
+
+.book-review {
+  font-size: .875rem;
+  color: rgba(255,255,255,.68);
+  font-style: italic;
+  line-height: 1.55;
+  padding-left: .9rem;
+  border-left: 2px solid var(--gold);
+}
+
+/* ── Email signup ── */
+.notify-form {
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2rem 2.5rem;
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.notify-form h3 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: .35rem;
+}
+
+.notify-form p {
+  color: var(--muted);
+  font-size: .9rem;
+  margin-bottom: 1.25rem;
+}
+
+.notify-form-row {
+  display: flex;
+  gap: .75rem;
+}
+
+.notify-form input[type="email"] {
+  flex: 1;
+  padding: .65rem 1rem;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 3px;
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  font-size: .95rem;
+  font-family: var(--sans);
+  outline: none;
+  transition: border-color .2s;
+}
+.notify-form input[type="email"]::placeholder { color: rgba(255,255,255,.35); }
+.notify-form input[type="email"]:focus { border-color: var(--gold); }
+
+.notify-form button {
+  padding: .65rem 1.4rem;
+  background: var(--gold);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: .9rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity .2s;
+}
+.notify-form button:hover { opacity: .85; }
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 2rem;
+  font-size: .88rem;
+  color: var(--muted);
+}
+
+footer a { color: rgba(255,255,255,.7); }
+footer a:hover { color: #fff; }
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .coming-soon-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .coming-soon-book { gap: 1.25rem; }
+  .coming-soon-book img { width: 100px; }
+  .notify-form { padding: 1.5rem; }
+  .notify-form-row { flex-direction: column; }
+  .islands-section, .islands-section img { max-height: 320px; }
+}
