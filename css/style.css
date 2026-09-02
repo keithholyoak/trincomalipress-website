@@ -242,6 +242,11 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── Buy Button ── */
+.buy-buttons {
+  display: flex;
+  gap: .75rem;
+}
+
 .buy-button {
   display: block;
   background: #e67e22;
@@ -255,6 +260,7 @@ img { max-width: 100%; display: block; }
   text-decoration: none;
   text-align: center;
   transition: opacity .2s;
+  flex: 1;
 }
 .buy-button:hover {
   opacity: .85;
