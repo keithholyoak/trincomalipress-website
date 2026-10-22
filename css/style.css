@@ -169,7 +169,7 @@ img { max-width: 100%; display: block; }
 
 .coming-soon-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 3rem;
   margin-bottom: 3rem;
 }
@@ -251,7 +251,7 @@ img { max-width: 100%; display: block; }
   display: block;
   background: #e67e22;
   color: #fff;
-  padding: .7rem 1.5rem;
+  padding: .7rem .6rem;
   border-radius: 3px;
   font-size: .9rem;
   font-weight: 600;
@@ -347,4 +347,10 @@ footer a:hover { color: #fff; }
   .notify-form { padding: 1.5rem; }
   .notify-form-row { flex-direction: column; }
   .islands-section, .islands-section img { max-height: 320px; }
+}
+
+@media (max-width: 480px) {
+  .coming-soon-book { flex-direction: column; }
+  .book-image-container { width: 260px; max-width: 100%; margin: 0 auto; }
+  .about-text p { text-align: left; }
 }
